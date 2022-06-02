@@ -1,0 +1,9 @@
+.listItem {
+	font-size: "18px";
+	color: "white";
+	font-weight: "bold";
+	text-transform: "uppercase";
+}
+.listItem:hover {
+   color: #fcf1e2;
+  }
