@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import {
 	// Box,
 	// Button,
@@ -47,52 +47,60 @@ function Footer() {
 						src="http://millionsquarefeet.in/wp-content/uploads/2021/10/footerlogo.png"
 						alt="banner"
 					/>
+					<Grid sx={{ padding: "30px 0" }}>
+						<Typography variant="p" sx={{ color: "white", padding: "10px 0" }}>
+							Find the perfect warehouse that fits your unique requirements.
+						</Typography>
+					</Grid>
 				</Grid>
 				<Grid xs={3}>
-					{but.map((ele) => {
+					{but.map((ele, i) => {
 						return (
-							<NewList>
-								<ListItem disablePadding>
-									<ListItemButton
-										sx={{
-											"&:hover": {
-												background: "none",
-											},
-										}}
-									>
-										{ele === "Quick Links" ? (
-											<ListItemText
-												primary={
-													<Typography
-														style={{
-															fontSize: "25px",
-															color: "white",
-															fontWeight: "bold",
-															textTransform: "uppercase",
-														}}
-													>
-														{ele}
-													</Typography>
-												}
-											/>
-										) : (
-											<ListItemText
-												primary={ele}
-												primaryTypographyProps={{
-													fontSize: 20,
-													fontWeight: "bold",
-													color: "white",
-												}}
-											/>
-										)}
-									</ListItemButton>
-								</ListItem>
-							</NewList>
+							<Fragment key={i}>
+								<NewList>
+									<ListItem disablePadding>
+										<ListItemButton
+											sx={{
+												"&:hover": {
+													background: "none",
+												},
+											}}
+										>
+											{ele === "Quick Links" ? (
+												<ListItemText
+													primary={
+														<Typography
+															style={{
+																fontSize: "15px",
+																color: "white",
+																fontWeight: "bold",
+																textTransform: "uppercase",
+															}}
+														>
+															{ele}
+														</Typography>
+													}
+												/>
+											) : (
+												<ListItemText
+													primary={ele}
+													primaryTypographyProps={{
+														textTransform: "uppercase",
+														fontSize: 15,
+														fontWeight: "bold",
+														color: "white",
+													}}
+												/>
+											)}
+										</ListItemButton>
+									</ListItem>
+								</NewList>
+							</Fragment>
 						);
 					})}
 				</Grid>
 				<Grid item xs={4} sx={{}}>
-					<Typography sx={{ color: "white" }}>
+					<Typography sx={{ color: "white", fontSize: "15px" }}>
 						Manyata NXT Tower-1, Level 5, Embassy Manyata Business Park,
 						<br />
 						Nagavara, Bangalore 560 045, Karnataka, India <br /> +91 123 456

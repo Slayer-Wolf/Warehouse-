@@ -120,7 +120,7 @@ export default function TabsMenu() {
 									return (
 										<Fragment key={i}>
 											<Grid item>
-												<SubCard data={ele} />
+												<SubCard data={ele}  />
 											</Grid>
 										</Fragment>
 									);
@@ -156,7 +156,7 @@ export default function TabsMenu() {
 						</Grid>
 					</Grid>
 				</TabPanel>
-				<TabPanel centered value={value} index={1}>
+				<TabPanel  value={value} index={1}>
 					<Grid
 						xs={12}
 						container

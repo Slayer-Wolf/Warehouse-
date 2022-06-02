@@ -1,10 +1,10 @@
-import React from "react";
-import { Grid, Divider,  styled } from "@mui/material";
+import React, { Fragment } from "react";
+import { Grid, Divider, styled } from "@mui/material";
 import Button from "@mui/material/Button";
 // Custom Button
 const ColorButton = styled(Button)(({ theme }) => ({
 	color: "#fff",
-	fontSize: 16,
+	fontSize: 13,
 	fontWeight: "bold",
 	padding: "13px 30px",
 	backgroundColor: "#de9e48",
@@ -16,7 +16,8 @@ const ColorButton = styled(Button)(({ theme }) => ({
 // Custom Button
 const LinkButton = styled(Button)(({ theme }) => ({
 	color: "#555454",
-	fontSize: 16,
+	fontSize: 13,
+
 	fontWeight: "bold",
 	"&:hover": {
 		color: "#7a431d",
@@ -50,17 +51,22 @@ function Header() {
 					zIndex: "1",
 				}}
 			>
-				<Grid container alignItems="center" xs={10}>
-					<Grid item xs={4}>
+				<Grid container alignItems="center" xs={11}>
+					<Grid item xs={3}>
 						<img
 							src="http://millionsquarefeet.in/wp-content/uploads/2021/10/logo-1.png"
-							alt="image"
+							alt="logo"
 						/>
 					</Grid>
-					<Grid container justifyContent="space-between" xs={8}>
-						{but.map((ele) => {
-							return ele.name === "Login" ? (
-								<ColorButton size="large" variant="contained" >
+					<Grid
+						container
+						alignItems="center"
+						justifyContent="space-evenly"
+						xs={9}
+					>
+						{but.map((ele, i) => {
+							return  ele.name === "Login" ? (
+								<ColorButton  size="large" variant="contained">
 									{ele.name}
 								</ColorButton>
 							) : (
@@ -72,6 +78,7 @@ function Header() {
 									{ele.name}
 								</LinkButton>
 							);
+						
 						})}
 					</Grid>
 				</Grid>

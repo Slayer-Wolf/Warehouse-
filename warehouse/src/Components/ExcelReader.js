@@ -66,12 +66,7 @@ const ExcelReader = () => {
 			setItems(d);
 		});
 	};
-	console.log(items);
-	//  var r = items ;
-	// Object.keys(r).forEach(function(key){
-	//     var value = r[key];
-	//     console.log(key);
-	// });
+
 	const { rows, columns } = createData(items);
 	console.log(createData(items));
 	return (
@@ -90,8 +85,7 @@ const ExcelReader = () => {
 						{columns.map((column, index) => (
 							<th
 								key={index}
-								//   align={column.align}
-								//   style={{ minWidth: column.minWidth }}
+
 							>
 								{column}
 							</th>
@@ -104,8 +98,8 @@ const ExcelReader = () => {
 							{columns.map((col) => {
 								if (col === "Reference No. /Image") {
 									return (
-										<a href={item[col]} target="_blank">
-											{" "}
+										<a href={item[col]} target="_blank" rel="noreferrer" >
+									
 											Click Here
 										</a>
 									);

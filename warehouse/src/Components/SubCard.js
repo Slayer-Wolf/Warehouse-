@@ -1,4 +1,4 @@
-import React from "react";
+import React,{Fragment} from "react";
 import {
 	Button,
 	CardContent,
@@ -20,46 +20,62 @@ const SubCard = (props) => {
 
 	return (
 		<>
-			<Card
+			<Card 
 				sx={{
 					backgroundColor: "#fff4e5",
 					width: "350px",
 					heigth: "468px",
-					padding: "5px 0",
 					borderRadius: "8px",
 					margin: "20px 15px",
 				}}
 			>
-			{data.header? <Grid xs={12} container justifyContent="center" alignItems="center">
-					<Box
-						sx={{
-							borderRadius: " 0 0 5px 5px",
-							backgroundColor: "#de9e48",
-							padding: "5px 25px",
-						}}
-					>
-						<Typography
+				{data.header ? (
+					<Grid container justifyContent="center" alignItems="center">
+						<Box
 							sx={{
-								color: "white",
-								fontWeight: "bold",
-								textTransform: "uppercase",
+								borderRadius: " 0 0 5px 5px",
+								backgroundColor: "#de9e48",
+								padding: "5px 25px",
 							}}
 						>
-							{data.header}
-						</Typography>
-					</Box>
-				</Grid>: "" }	
-				<CardContent>
+							<Typography
+								sx={{
+									color: "white",
+									fontWeight: "bold",
+									textTransform: "uppercase",
+								}}
+							>
+								{data.header}
+							</Typography>
+						</Box>
+					</Grid>
+				) : (
+					""
+				)}
+				<CardContent >
 					<Grid container>
-						<Grid container xs={10}>
+						<Grid container xs={11} sx={{ padding: "10px" }}>
 							<Grid item>
-								<Typography variant="h3">{data.name}</Typography>
-								<p>{data.title}</p>
-								<Divider sx={{ width: "100%" }} />
+								<Typography
+									sx={{ fontWeight: "bold", color: "0d0d0d" }}
+									variant="h4"
+								>
+									{data.name}
+								</Typography>
+								<Typography
+									variant="p"
+									sx={{
+										color: "#7a431d",
+										fontSize: "17px",
+									}}
+								>
+									{data.title}
+								</Typography>
 							</Grid>
+							<Divider sx={{ width: "100%", padding: "10px 0" }} />
 							<Grid item sx={{ padding: "15px 0" }}>
 								<Typography
-									variant="h4"
+									variant="h3"
 									sx={{
 										color: "#7a431d",
 										fontSize: "40px",
@@ -85,9 +101,9 @@ const SubCard = (props) => {
 									sx={{ padding: "5px 0 ", width: "100%" }}
 								>
 									<List>
-										{data.listItem.map((item) => {
+										{data.listItem.map((item, i) => {
 											return (
-												<ListItem
+												<ListItem key={i}
 													disablePadding
 													sx={{ display: "-webkit-box" }}
 												>
@@ -105,6 +121,7 @@ const SubCard = (props) => {
 															<Typography
 																variant="body2"
 																sx={{
+																	opacity: `${item.opacity}`,
 																	fontSize: "16px",
 																	fontWeight: "bold",
 																}}
@@ -126,12 +143,27 @@ const SubCard = (props) => {
 					<Button
 						sx={{
 							background: "#de9e48",
-							color: "black",
 							padding: "20px 60px",
+							margin: "20px 0",
+							"&:hover": {
+								background: "#de9e48",
+							},
 						}}
 						size="large"
 					>
-						{data.Button}
+						<Typography
+							sx={{
+								fontWeight: "bold",
+								color: "black",
+								fontSize: "20px",
+								"&:hover": {
+									color: "white",
+									backgroundColor: "none",
+								},
+							}}
+						>
+							{data.Button}
+						</Typography>
 					</Button>
 				</CardActions>
 			</Card>
