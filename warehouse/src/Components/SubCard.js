@@ -1,4 +1,4 @@
-import React,{Fragment} from "react";
+import React, { Fragment } from "react";
 import {
 	Button,
 	CardContent,
@@ -17,10 +17,9 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 const SubCard = (props) => {
 	const { data } = props;
-
 	return (
 		<>
-			<Card 
+			<Card
 				sx={{
 					backgroundColor: "#fff4e5",
 					width: "350px",
@@ -52,18 +51,18 @@ const SubCard = (props) => {
 				) : (
 					""
 				)}
-				<CardContent >
+				<CardContent>
 					<Grid container>
 						<Grid container xs={11} sx={{ padding: "10px" }}>
 							<Grid item>
 								<Typography
+									component={"span"}
 									sx={{ fontWeight: "bold", color: "0d0d0d" }}
 									variant="h4"
 								>
 									{data.name}
 								</Typography>
 								<Typography
-									variant="p"
 									sx={{
 										color: "#7a431d",
 										fontSize: "17px",
@@ -75,6 +74,7 @@ const SubCard = (props) => {
 							<Divider sx={{ width: "100%", padding: "10px 0" }} />
 							<Grid item sx={{ padding: "15px 0" }}>
 								<Typography
+									component={"span"}
 									variant="h3"
 									sx={{
 										color: "#7a431d",
@@ -85,6 +85,7 @@ const SubCard = (props) => {
 									{data.rate}
 								</Typography>
 								<Typography
+									component={"span"}
 									variant="h5"
 									sx={{
 										fontFamily: "Montserrat, sans-serif",
@@ -103,7 +104,8 @@ const SubCard = (props) => {
 									<List>
 										{data.listItem.map((item, i) => {
 											return (
-												<ListItem key={i}
+												<ListItem
+													key={i}
 													disablePadding
 													sx={{ display: "-webkit-box" }}
 												>
@@ -119,6 +121,7 @@ const SubCard = (props) => {
 													<ListItemText
 														primary={
 															<Typography
+																component={"span"}
 																variant="body2"
 																sx={{
 																	opacity: `${item.opacity}`,

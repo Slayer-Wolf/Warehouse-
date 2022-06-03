@@ -52,7 +52,7 @@ function Header() {
 				}}
 			>
 				<Grid container alignItems="center" xs={11}>
-					<Grid item xs={3}>
+					<Grid item={true} xs={3} >
 						<img
 							src="http://millionsquarefeet.in/wp-content/uploads/2021/10/logo-1.png"
 							alt="logo"
@@ -65,20 +65,23 @@ function Header() {
 						xs={9}
 					>
 						{but.map((ele, i) => {
-							return  ele.name === "Login" ? (
-								<ColorButton  size="large" variant="contained">
-									{ele.name}
-								</ColorButton>
+							return ele.name === "Login" ? (
+								<Fragment key={i}>
+									<ColorButton size="large" variant="contained">
+										{ele.name}
+									</ColorButton>
+								</Fragment>
 							) : (
-								<LinkButton
-									disableElevation={true}
-									sx={{ color: `${ele.color}` }}
-									size="large"
-								>
-									{ele.name}
-								</LinkButton>
+								<Fragment key={i}>
+									<LinkButton
+										disableElevation={true}
+										sx={{ color: `${ele.color}` }}
+										size="large"
+									>
+										{ele.name}
+									</LinkButton>
+								</Fragment>
 							);
-						
 						})}
 					</Grid>
 				</Grid>

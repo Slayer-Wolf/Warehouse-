@@ -103,6 +103,7 @@ export default function TabsMenu() {
 					>
 						<Box>
 							<Typography
+								component={"span"}
 								variant="h2"
 								sx={{
 									fontSize: "24px",
@@ -120,7 +121,7 @@ export default function TabsMenu() {
 									return (
 										<Fragment key={i}>
 											<Grid item>
-												<SubCard data={ele}  />
+												<SubCard data={ele} />
 											</Grid>
 										</Fragment>
 									);
@@ -146,7 +147,6 @@ export default function TabsMenu() {
 								<Typography>^ For more than 5 listings in the year</Typography>
 								<Typography>
 									<span style={{ fontWeight: "bold", color: "#de9e48" }}>
-									
 										Notes:
 									</span>
 									Susbcription duration is different from the live duration due
@@ -156,7 +156,7 @@ export default function TabsMenu() {
 						</Grid>
 					</Grid>
 				</TabPanel>
-				<TabPanel  value={value} index={1}>
+				<TabPanel value={value} index={1}>
 					<Grid
 						xs={12}
 						container
@@ -166,6 +166,7 @@ export default function TabsMenu() {
 					>
 						<Box>
 							<Typography
+							component={'span'} 
 								variant="h2"
 								sx={{
 									fontSize: "24px",
@@ -208,8 +209,10 @@ export default function TabsMenu() {
 					</Grid>
 				</TabPanel>
 				<TabPanel value={value} index={2}>
-					<Grid container justifyContent="center" sx={{ margin: "50px 0" }} >
-						<Grid container xs={10}><ExcelReader/></Grid>
+					<Grid container justifyContent="center" sx={{ margin: "50px 0" }}>
+						<Grid container xs={10}>
+							<ExcelReader />
+						</Grid>
 					</Grid>
 				</TabPanel>
 			</Box>
