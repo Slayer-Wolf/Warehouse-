@@ -45,14 +45,14 @@ function Header() {
 					position: "sticky",
 					top: "0",
 					height: "100px",
-					margin: "20px 0 ",
-					padding: "30px 0",
+					margin: "15px 0 ",
+					padding: "20px 0",
 					backgroundColor: "#ffffff",
 					zIndex: "1",
 				}}
 			>
 				<Grid container alignItems="center" xs={11}>
-					<Grid item={true} xs={3} >
+					<Grid item={true} xs={4} >
 						<img
 							src="http://millionsquarefeet.in/wp-content/uploads/2021/10/logo-1.png"
 							alt="logo"
@@ -62,7 +62,7 @@ function Header() {
 						container
 						alignItems="center"
 						justifyContent="space-evenly"
-						xs={9}
+						xs={8}
 					>
 						{but.map((ele, i) => {
 							return ele.name === "Login" ? (

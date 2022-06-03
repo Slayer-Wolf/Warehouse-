@@ -74,7 +74,6 @@ const SubCard = (props) => {
 							<Divider sx={{ width: "100%", padding: "10px 0" }} />
 							<Grid item sx={{ padding: "15px 0" }}>
 								<Typography
-									component={"span"}
 									variant="h3"
 									sx={{
 										color: "#7a431d",
