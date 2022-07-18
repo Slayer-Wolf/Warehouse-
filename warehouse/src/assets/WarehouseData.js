@@ -1,0 +1,43 @@
+const WarehouseData = [
+	{
+		id: 0,
+		img: "https://millionsquarefeet.in/wp-content/uploads/2022/01/SC-DEL-WH-12-10-2020-2-04-592x444.jpeg",
+		city: "Delhi",
+		Location: "Kapashera",
+		"Available Area": "16000 Sq Ft",
+		"Structure Type": "PEB shed",
+		Flooring: "Trimix",
+		Rent: "₹24",
+	},
+	{
+		id: 1,
+		img: "https://millionsquarefeet.in/wp-content/uploads/2022/01/SC-DEL-WH-14-10-2020-3-592x444.jpeg",
+		city: "Delhi",
+		Location: "Bhamnoli",
+		"Available Area": "4000 Sq Ft",
+		"Structure Type": "PEB shed",
+		Flooring: "Trimix",
+		Rent: "₹20",
+	},
+	{
+		id: 2,
+		img: "https://millionsquarefeet.in/wp-content/uploads/2022/01/img927-592x444.jpg",
+		city: "Delhi",
+		Location: "Badli Industrial Area",
+		"Available Area": "33000 Sq Ft",
+		"Structure Type": "RCC",
+		Flooring: "Industrial",
+		Rent: "₹40",
+	},
+	{
+		id: 3,
+		img: "https://millionsquarefeet.in/wp-content/uploads/2022/01/VIK-LKO-WH-02-11-2020-16-09-592x444.jpeg",
+		city: "Lucknow",
+		Location: "Nadaraganj",
+		"Available Area": "30,000 Sq Ft",
+		"Structure Type": "PEB Shed",
+		Flooring: "Trimix",
+		Rent: "₹20",
+	},
+];
+export default WarehouseData;

@@ -23,7 +23,7 @@ const SubCard = (props) => {
 				sx={{
 					backgroundColor: "#fff4e5",
 					width: "350px",
-					heigth: "468px",
+
 					borderRadius: "8px",
 					margin: "20px 15px",
 				}}

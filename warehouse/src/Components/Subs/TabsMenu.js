@@ -1,10 +1,9 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import { Box, Typography, Tab, Tabs, Grid } from "@mui/material";
+import { Box, Typography, Tab, Tabs, Grid, styled } from "@mui/material";
 import SubCard from "./SubCard";
-import { styled } from "@mui/material/styles";
-import newData from "../assets/Data";
-import ExcelReader from "./ExcelReader";
+import newData from "../../assets/Data";
+
 const CustomTabs = styled((props) => (
 	<Tabs
 		{...props}
@@ -37,6 +36,7 @@ const CustomTab = styled((props) => <Tab disableRipple {...props} />)(
 );
 
 const listingData = newData.map((ele) => ele);
+
 function TabPanel(props) {
 	const { children, value, index, ...other } = props;
 
@@ -88,7 +88,6 @@ export default function TabsMenu() {
 				>
 					<CustomTab label="Listing" {...a11yProps(0)} />
 					<CustomTab label="Leads/Deals" {...a11yProps(1)} />
-					<CustomTab label="ExcelReader" {...a11yProps(2)} />
 				</CustomTabs>
 			</Box>
 
@@ -166,7 +165,7 @@ export default function TabsMenu() {
 					>
 						<Box>
 							<Typography
-							component={'span'} 
+								component={"span"}
 								variant="h2"
 								sx={{
 									fontSize: "24px",
@@ -205,13 +204,6 @@ export default function TabsMenu() {
 									they will be carried forward when the new plan is activated.
 								</Typography>
 							</Box>
-						</Grid>
-					</Grid>
-				</TabPanel>
-				<TabPanel value={value} index={2}>
-					<Grid container justifyContent="center" sx={{ margin: "50px 0" }}>
-						<Grid container xs={10}>
-							<ExcelReader />
 						</Grid>
 					</Grid>
 				</TabPanel>

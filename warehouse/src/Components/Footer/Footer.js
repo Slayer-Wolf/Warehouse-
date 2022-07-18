@@ -11,6 +11,7 @@ import {
 	ListItem,
 } from "@mui/material";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 
 // custom Component
@@ -26,13 +27,14 @@ const NewList = styled(List)(({ theme }) => ({
 
 function Footer() {
 	const but = [
-		"Quick Links",
-		"Home",
-		"Warehouse",
-		"Subscription Plan",
-		"AboutUs",
-		"Contact-us",
-		"Login",
+		{ name: "Quick Links" },
+		{ name: "Home", Links: "/" },
+		{ name: "Warehouse", Links: "Warehouse" },
+		{ name: "Subscription Plan", Links: "Subs" },
+		{ name: "About Us", Links: "Aboutus" },
+		{ name: "Contact us", Links: "Contact us" },
+		{ name: "VERIFICATION PHILOSOPHY", Links: "Philosophy" },
+		{ name: "SERVICES", Links: "services" },
 	];
 	return (
 		<Grid
@@ -40,6 +42,7 @@ function Footer() {
 			justifyContent="center"
 			alignItems="center"
 			style={{ backgroundColor: "#7A431D" }}
+			py={5}
 		>
 			<Grid container xs={10} style={{ padding: "50px 0" }}>
 				<Grid item xs={5}>
@@ -63,10 +66,11 @@ function Footer() {
 											sx={{
 												"&:hover": {
 													background: "none",
+													color: "#de9e48",
 												},
 											}}
 										>
-											{ele === "Quick Links" ? (
+											{ele.name === "Quick Links" ? (
 												<ListItemText
 													primary={
 														<Typography
@@ -77,18 +81,31 @@ function Footer() {
 																textTransform: "uppercase",
 															}}
 														>
-															{ele}
+															{ele.name}
 														</Typography>
 													}
 												/>
 											) : (
 												<ListItemText
-													primary={ele}
+													primary={
+														<Link
+															style={{
+																textDecoration: "none",
+																color: "white",
+															}}
+															to={ele.Links}
+														>
+															{ele.name}
+														</Link>
+													}
 													primaryTypographyProps={{
 														textTransform: "uppercase",
 														fontSize: 15,
 														fontWeight: "bold",
 														color: "white",
+														"&:hover": {
+															color: "#de9e48",
+														},
 													}}
 												/>
 											)}

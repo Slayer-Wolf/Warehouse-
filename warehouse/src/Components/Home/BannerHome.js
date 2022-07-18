@@ -1,10 +1,8 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
-import "./banner.css";
+import "../banner.css";
 
-export default function Banner(props) {
-	const { data } = props;
-	console.log(data, "data");
+export default function BannerHome() {
 	const [offset, setOffset] = useState(0);
 
 	useEffect(() => {
@@ -23,7 +21,7 @@ export default function Banner(props) {
 		<div className="main">
 			<section className="hero">
 				<img
-					src={data.url}
+					src="http://millionsquarefeet.in/wp-content/uploads/2021/10/banner-home.jpg"
 					alt="test"
 					className="parallax"
 					style={{
@@ -31,7 +29,12 @@ export default function Banner(props) {
 					}}
 				/>
 				<div className="text-wrapper">
-					<h1 className="headline">{data.title}</h1>
+					<h1 className="headline">MILLION WAREHOUSES.</h1>
+
+					<h1 className="headline2">ONE PERFECT WAREHOUSE.</h1>
+					<p className="para">
+						The search for the most suitable warehouse ends here.
+					</p>
 				</div>
 			</section>
 		</div>
