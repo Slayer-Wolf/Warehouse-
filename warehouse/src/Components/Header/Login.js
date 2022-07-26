@@ -24,6 +24,10 @@ const validationSchema = yup.object({
 		.string("Enter your number")
 		.min(10, "number should be of  10 digit")
 		.required("number is required"),
+	email: yup
+		.string("Enter your number")
+		.email("Enter a valid email")
+		.required("number is required"),
 });
 
 const Login = () => {
@@ -56,6 +60,16 @@ const Login = () => {
 						value={formik.values.number}
 						error={formik.touched.number && Boolean(formik.errors.number)}
 						helperText={formik.touched.number && formik.errors.number}
+					/>
+					<TextField
+						fullWidth
+						id="email"
+						name="email"
+						label="Email"
+						value={formik.values.email}
+						onChange={formik.handleChange}
+						error={formik.touched.email && Boolean(formik.errors.email)}
+						helperText={formik.touched.email && formik.errors.email}
 					/>
 					<Grid container justifyContent="center" my={1} spacing={2}>
 						<Grid item align="center" xs={6}>

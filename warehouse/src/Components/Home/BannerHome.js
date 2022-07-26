@@ -1,7 +1,7 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 import "../banner.css";
-
+import Searchbar from "./Searchbar";
 export default function BannerHome() {
 	const [offset, setOffset] = useState(0);
 
@@ -35,6 +35,7 @@ export default function BannerHome() {
 					<p className="para">
 						The search for the most suitable warehouse ends here.
 					</p>
+					<Searchbar />
 				</div>
 			</section>
 		</div>

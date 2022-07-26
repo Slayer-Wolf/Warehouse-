@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "../Components/Banner";
 import { Grid, Typography } from "@mui/material";
 import ContactForm from "../Components/Home/ContactForm";
@@ -7,6 +7,9 @@ const data = {
 	title: "Providing A Big Space For A Big Future.",
 };
 const Services = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 	return (
 		<>
 			<Banner data={data} />

@@ -24,6 +24,7 @@ const validationSchema = yup.object({
 		.string("Enter your email")
 		.email("Enter a valid email")
 		.required("Email is required"),
+	warehouse: yup.string().required("Type is not selected"),
 });
 
 export default function ContactForm() {
@@ -126,6 +127,13 @@ export default function ContactForm() {
 											value={formik.values.warehouse}
 											label="Warehouse-Type"
 											onChange={formik.handleChange("warehouse")}
+											error={
+												formik.touched.warehouse &&
+												Boolean(formik.errors.warehouse)
+											}
+											helperText={
+												formik.touched.warehouse && formik.errors.warehouse
+											}
 										>
 											<MenuItem value="Type1">Type 1</MenuItem>
 											<MenuItem value="Type2">Type 2</MenuItem>

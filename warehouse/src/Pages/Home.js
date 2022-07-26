@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import BannerHome from "../Components/Home/BannerHome";
+
 import HomeImage from "../assets/home.jpg";
 import {
 	Box,
@@ -45,7 +46,7 @@ const Home = () => {
 		<>
 			<BannerHome />
 			<Grid container justifyContent="center" xs={12} py={5}>
-				<Grid container justifyContent="center" xs={10}>
+				<Grid container justifyContent="space-between" xs={10} spacing={3}>
 					<Grid item xs={7}>
 						<Typography variant="h3" sx={{ fontWeight: "bold" }}>
 							Everything about Million Square Feet
@@ -66,9 +67,7 @@ const Home = () => {
 					<Grid item xs={5}>
 						<img
 							style={{
-								backgroundSize: "contain ",
-								backgroundPosition: "center",
-								width: "580px",
+								width: "100%",
 							}}
 							src={HomeImage}
 							alt="home "

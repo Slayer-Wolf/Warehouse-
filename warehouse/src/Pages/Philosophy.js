@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "../Components/Banner";
 import { Box, Grid, TextField, Button, Typography, Stack } from "@mui/material";
 import VeriCard from "../Components/verification/VeriCard";
@@ -12,6 +12,9 @@ const data = {
 };
 
 const Philosophy = () => {
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 	return (
 		<>
 			<Banner data={data} />

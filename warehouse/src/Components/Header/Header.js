@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import CloseIcon from "@mui/icons-material/Close";
 import LoginTab from "./LoginTab";
 
+//modal styling
+
 const style = {
 	position: "absolute",
 	top: "50%",
@@ -12,6 +14,7 @@ const style = {
 	width: 400,
 	bgcolor: "background.paper",
 	boxShadow: 24,
+	border: "2px solid #de9e48",
 	p: 2,
 };
 
